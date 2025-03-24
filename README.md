@@ -48,7 +48,8 @@ The CLI tools that i use to code
 - sudo make install
 - nvim --version
 
-### yazi
+### yazi 
+- dose't work for ubuntu 20.04
 - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 - restart shell
 - rustup update
