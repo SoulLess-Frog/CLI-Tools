@@ -1,0 +1,6 @@
+*.log
+*.vim
+
+env/
+venv/
+lazy-lock.json
