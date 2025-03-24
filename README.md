@@ -6,6 +6,7 @@ The CLI tools that i use to code
 - zsh (with plugins)
 
 # First thing you need to do
+- kitty +kitten ssh <put the ip of the server> // do it once for kitty for ssh
 - git clone https://github.com/SoulLess-Frog/CLI-Tools.git
 - move the files inside CLI-Tools folder to .config/ folder
   
