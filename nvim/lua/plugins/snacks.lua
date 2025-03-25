@@ -7,7 +7,17 @@ return {
 		bigfile = { enabled = true },
 		image = { enabled = true },
 		notifier = { enabled = true },
-		picker = { enabled = true },
+		picker = {
+			enabled = true,
+			win = {
+				input = {
+					keys = {
+						["J"] = { "preview_scroll_down", mode = { "n" } },
+						["K"] = { "preview_scroll_up", mode = { "n" } },
+					},
+				},
+			},
+		},
 
 		dashboard = {
 			enabled = true,
