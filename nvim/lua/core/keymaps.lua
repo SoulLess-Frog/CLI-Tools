@@ -14,7 +14,6 @@ map("n", "<leader>w", "<cmd> w <CR>", "[W]right file")
 
 -- quit file
 map("n", "<C-q>", "<cmd> q! <CR>", "")
-map("n", "<C-x>", "<cmd> wq <CR>", "")
 
 -- delete single character without copying into register
 map("n", "x", '"_x', "")
