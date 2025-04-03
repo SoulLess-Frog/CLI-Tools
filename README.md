@@ -58,3 +58,4 @@ The CLI tools that i use to code
 - cd yazi
 - cargo build --release --locked
 - mv target/release/yazi target/release/ya /usr/local/bin/
+- if this dose not work use snap
