@@ -5,6 +5,13 @@ return {
 	{ "tpope/vim-obsession", lazy = false },
 	{ "tpope/vim-sleuth" },
 	{ "folke/which-key.nvim" },
+	{ "norcalli/nvim-colorizer.lua", opts = {} },
+	{ "asiryk/auto-hlsearch.nvim", opts = {} },
+	{
+		"m4xshen/hardtime.nvim",
+		dependencies = { "MunifTanjim/nui.nvim" },
+		opts = {},
+	},
 	{
 		"folke/todo-comments.nvim",
 		event = "VimEnter",
@@ -12,38 +19,14 @@ return {
 		opts = { signs = false },
 	},
 	{
-		"asiryk/auto-hlsearch.nvim",
-		config = function()
-			require("auto-hlsearch").setup({
-				remap_keys = { "/", "?", "*", "#", "n", "N" },
-				create_commands = true,
-				pre_hook = function() end,
-				post_hook = function() end,
-			})
-		end,
-	},
-	{
-		"norcalli/nvim-colorizer.lua",
-		config = function()
-			require("colorizer").setup()
-		end,
-	},
-	{
-		"m4xshen/hardtime.nvim",
-		dependencies = { "MunifTanjim/nui.nvim" },
-		opts = {},
-	},
-	{
 		"folke/noice.nvim",
 		event = "VeryLazy",
-		config = function()
-			require("noice").setup({
-				lsp = { signature = { auto_open = { enabled = false } } },
-				presets = {
-					command_palette = { views = { cmdline_popup = { position = { row = "90%", col = "50%" } } } },
-				},
-			})
-		end,
+		opts = {
+			lsp = { signature = { auto_open = { enabled = false } } },
+			presets = {
+				command_palette = { views = { cmdline_popup = { position = { row = "90%", col = "50%" } } } },
+			},
+		},
 		dependencies = { "MunifTanjim/nui.nvim" },
 	},
 }
