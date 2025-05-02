@@ -1,4 +1,3 @@
--- Standalone plugins with less than 10 lines of config go here
 return {
 	{ "christoomey/vim-tmux-navigator", lazy = false },
 	{ "mrjones2014/smart-splits.nvim" },

@@ -8,7 +8,13 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	local lazyrepo = "https://github.com/folke/lazy.nvim.git"
 	local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
 	if vim.v.shell_error ~= 0 then
-		error("Error cloning lazy.nvim:\n" .. out)
+		vim.api.nvim_echo({
+			{ "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+			{ out, "WarningMsg" },
+			{ "\nPress any key to exit..." },
+		}, true, {})
+		vim.fn.getchar()
+		os.exit(1)
 	end
 end
 vim.opt.rtp:prepend(lazypath)
@@ -22,16 +28,31 @@ require("lazy").setup({
 	require("plugins.treesitter"),
 	require("plugins.lsp"),
 	require("plugins.autocompletion"),
-	require("plugins.none-ls"),
+	require("plugins.formatting"),
 	require("plugins.gitsigns"),
 	require("plugins.ufo"),
 	require("plugins.snacks"),
 	require("plugins.misc"),
 	require("plugins.tmux_runner"),
 	require("plugins.flash"),
-	require("plugins.VenvSelect"),
+	require("plugins.venv_selector"),
 	require("plugins.mini"),
 	require("plugins.git"),
 })
 
 require("plugins.snacks_keymapsh")
+
+vim.diagnostic.config({
+	virtual_text = {
+		severity = {
+			max = vim.diagnostic.severity.WARN,
+		},
+		current_line = true,
+	},
+	virtual_lines = {
+		severity = {
+			min = vim.diagnostic.severity.ERROR,
+		},
+		current_line = true,
+	},
+})
