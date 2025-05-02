@@ -7,7 +7,7 @@ The CLI tools that i use to code
 
 # First thing you need to do
 - kitty +kitten ssh (put the ip of the server) // do it once for kitty for ssh
-- git clone https://github.com/SoulLess-Frog/CLI-Tools.git
+- git clone https://github.com/SoulLess-Frog/CLI-Tools.git ~/.config/
 - move the files inside CLI-Tools folder to .config/ folder
   
 - install tmux and zsh
@@ -49,7 +49,6 @@ The CLI tools that i use to code
 - nvim --version
 
 ### yazi 
-- dose't work for ubuntu 20.04
 - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 - restart shell
 - rustup update
