@@ -6,30 +6,29 @@ The CLI tools that i use to code
 - zsh (with plugins)
 
 # First thing you need to do
-- kitty +kitten ssh (put the ip of the server) // do it once for kitty for ssh
+- kitty +kitten ssh (put the ip of the server)
 - git clone https://github.com/SoulLess-Frog/CLI-Tools.git ~/.config/
 - move the files inside CLI-Tools folder to .config/ folder
   
 - install tmux and zsh
   
 - for tmux 
-  - git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm //tmux
+  - git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     
 - for zsh
   - chsh -s $(which zsh)
   - sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   - git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
   - git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-  - git clone https://github.com/kutsan/zsh-system-clipboard ${ZSH_CUSTOM:-~/.zsh}/plugins/zsh-system-clipboard
+  - git clone https://github.com/wochap/zsh-vi-mode \$ZSH_CUSTOM/plugins/zsh-vi-mode
   - put this in the .zshrc
     - plugins=( 
         git
         sudo
+        zsh-vi-mode
         zsh-autosuggestions
-        zsh-system-clipboard
         zsh-syntax-highlighting
       )
-    - bindkey -v // after the source $ZSH/oh-my-zsh.s
 
 ## How to for arch 
 - sudo pacman -S neovim yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick python3-venv npm
