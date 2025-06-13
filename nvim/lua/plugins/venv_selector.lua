@@ -9,5 +9,5 @@ return {
 	lazy = false,
 	branch = "regexp", -- This is the regexp branch, use this for the new version
 	opts = {},
-	keys = { { "<leader>se", "<cmd>VenvSelect<cr>", desc = "[S]earch [E]nvironment" } },
+	keys = { { "<leader>se", ":VenvSelect<cr>", desc = "[S]earch [E]nvironment" } },
 }

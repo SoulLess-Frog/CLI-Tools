@@ -6,6 +6,7 @@ return {
 			-- Overriding Default Configurations. [OPTIONAL]
 			save_session = false, -- Save file before action (:wall)
 			build_run_window_title = "build", -- Tmux window name for Build/Run
+			local_config = "tmux-compile.lua", -- Set local commands file name
 			---- same window pane
 			new_pane_everytime = false, -- Use existing side panes for action, when false
 			side_width_percent = 50, -- Side pane width percentage
@@ -32,10 +33,6 @@ return {
 					-- not all properties are required for all extensions
 				},
 				{
-					extension = { "py" },
-					run = "python3 %:r",
-				},
-				{
 					extension = { "go" },
 					run = "go run .",
 					-- Run would work for golang
@@ -45,4 +42,5 @@ return {
 			},
 		})
 	end,
+	keys = { { "<leader>r", ":TMUXcompile RunH<cr>", desc = "[R]un Code" } },
 }
