@@ -4,8 +4,8 @@ return {
 	keys = {
 		{
 			"<leader>e",
-			"<cmd>Yazi cwd<cr>",
-			desc = "Open yazi",
+			":Yazi cwd<cr>",
+			desc = "Open Yazi",
 		},
 	},
 	opts = {

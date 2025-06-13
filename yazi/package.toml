@@ -1,5 +1,12 @@
-[plugin]
-deps = []
+[[plugin.deps]]
+use = "KKV9/compress"
+rev = "9fc8fe0"
+hash = "2ad086899bf368fba211a33d8f68c39d"
+
+[[plugin.deps]]
+use = "boydaihungst/restore"
+rev = "b7c3376"
+hash = "d9dbd61d8b814e74a5420dba1e4788c4"
 
 [flavor]
 deps = []
