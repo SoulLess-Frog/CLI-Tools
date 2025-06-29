@@ -7,7 +7,7 @@ The CLI tools that i use to code
 
 # First thing you need to do
 - kitty +kitten ssh (put the ip of the server)
-- git clone https://github.com/SoulLess-Frog/CLI-Tools.git ~/.config/
+- git clone https://github.com/SoulLess-Frog/CLI-Tools.git
 - move the files inside CLI-Tools folder to .config/ folder
   
 - install tmux and zsh
