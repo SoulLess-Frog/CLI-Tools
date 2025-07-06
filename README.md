@@ -6,37 +6,19 @@ The CLI tools that i use to code
 - zsh (with plugins)
 
 # First thing you need to do
-- kitty +kitten ssh (put the ip of the server)
 - git clone https://github.com/SoulLess-Frog/CLI-Tools.git
-- move the files inside CLI-Tools folder to .config/ folder
-  
-- install tmux and zsh
+- move the files inside CLI-Tools folder to .config/ folder and .zshrc to home
   
 - for tmux 
   - git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-    
-- for zsh
-  - chsh -s $(which zsh)
-  - sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  - git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-  - git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-  - git clone https://github.com/wochap/zsh-vi-mode \$ZSH_CUSTOM/plugins/zsh-vi-mode
-  - put this in the .zshrc
-    - plugins=( 
-        git
-        sudo
-        zsh-vi-mode
-        zsh-autosuggestions
-        zsh-syntax-highlighting
-      )
 
 ## How to for arch 
-- sudo pacman -S neovim yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick python3-venv npm
+- sudo pacman -S tmux zsh starship neovim yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick python3-venv npm
   
 ## How to for debian
 
 ### tmux and dependance
-- apt install ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide imagemagick python3-venv npm
+- apt install tmux zsh starship ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide imagemagick python3-venv npm
   
 ### neovim
 - sudo apt install git ninja-build gettext cmake unzip curl
