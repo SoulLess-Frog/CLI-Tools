@@ -16,19 +16,10 @@ zinit light kutsan/zsh-system-clipboard
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-syntax-highlighting
 
-# Add in snippets
-zinit snippet OMZP::sudo
-
 # Load completions
 autoload -Uz compinit && compinit
 
 zinit cdreplay -q
-
-# Keybindings
-# bindkey -e
-# bindkey '^p' history-search-backward
-# bindkey '^n' history-search-forward
-# bindkey '^[w' kill-region
 
 # History
 HISTSIZE=5000
@@ -56,6 +47,11 @@ eval "$(starship init zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
 bindkey -v
+export KEYTIMEOUT=1
+
+bindkey '^?' backward-delete-char
+bindkey "\e[3~" delete-char
+bindkey -a '^[[3~' delete-char
 
 # Change cursor with support for inside/outside tmux
 function _set_cursor() {
