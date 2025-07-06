@@ -1,5 +1,6 @@
 *.log
 *.vim
+*.env
 
 env/
 venv/
