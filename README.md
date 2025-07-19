@@ -18,7 +18,7 @@ The CLI tools that i use to code
 ## How to for debian
 
 ### tmux and dependance
-- apt install tmux zsh ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide imagemagick npm
+- apt install tmux zsh ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide imagemagick npm unzip trash-cli
 - curl -sS https://starship.rs/install.sh | sh
   
 ### neovim
