@@ -13,16 +13,16 @@ The CLI tools that i use to code
   - git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ## How to for arch 
-- sudo pacman -S tmux zsh starship neovim yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick python3-venv npm
+- sudo pacman -S tmux zsh starship neovim yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick npm unzip trash-cli
   
 ## How to for debian
 
 ### tmux and dependance
-- apt install tmux zsh ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide imagemagick python3-venv npm
+- apt install tmux zsh ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide imagemagick npm
 - curl -sS https://starship.rs/install.sh | sh
   
 ### neovim
-- sudo apt install git ninja-build gettext cmake unzip curl
+- sudo apt install git ninja-build gettext cmake curl unzip trash-cli
 - git clone https://github.com/neovim/neovim.git
 - cd neovim
 - git checkout stable
