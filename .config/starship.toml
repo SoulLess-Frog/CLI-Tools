@@ -1,4 +1,2 @@
-add_newline = false
-
 format = """$directory$character"""
 right_format = """$all"""

@@ -1,12 +1,17 @@
 [[plugin.deps]]
-use = "KKV9/compress"
-rev = "9fc8fe0"
-hash = "2ad086899bf368fba211a33d8f68c39d"
+use = "boydaihungst/restore"
+rev = "84f1921"
+hash = "355f163cb374b5c9514aee2b64121678"
 
 [[plugin.deps]]
-use = "boydaihungst/restore"
-rev = "b7c3376"
-hash = "d9dbd61d8b814e74a5420dba1e4788c4"
+use = "ndtoan96/ouch"
+rev = "0742fff"
+hash = "2bd799b42b8e42b8ef100310be71f8d1"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:mount"
+rev = "de53d90"
+hash = "f10a14e823382d90fab5b3ee54cb38fe"
 
 [flavor]
 deps = []
