@@ -14,22 +14,7 @@ return {
 			jsonls = {},
 			yamlls = {},
 			rust_analyzer = {},
-			pylsp = {
-				settings = {
-					pylsp = {
-						plugins = {
-							pyflakes = { enabled = false },
-							pycodestyle = { enabled = false },
-							autopep8 = { enabled = false },
-							yapf = { enabled = false },
-							mccabe = { enabled = false },
-							pylsp_mypy = { enabled = false },
-							pylsp_black = { enabled = false },
-							pylsp_isort = { enabled = false },
-						},
-					},
-				},
-			},
+			basedpyright = {},
 			lua_ls = {
 				settings = {
 					Lua = {
@@ -56,6 +41,7 @@ return {
 			"prettierd",
 			"prettier",
 			"rustfmt",
+			"ruff",
 		})
 
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })

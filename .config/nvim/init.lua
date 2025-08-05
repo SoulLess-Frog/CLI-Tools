@@ -1,6 +1,5 @@
 require("core.options")
 require("core.keymaps")
-require("core.snippets")
 
 -- Set up the Lazy plugin manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -38,21 +37,4 @@ require("lazy").setup({
 	require("plugins.venv_selector"),
 	require("plugins.mini"),
 	require("plugins.git"),
-})
-
-require("plugins.snacks_keymapsh")
-
-vim.diagnostic.config({
-	virtual_text = {
-		severity = {
-			max = vim.diagnostic.severity.WARN,
-		},
-		current_line = true,
-	},
-	virtual_lines = {
-		severity = {
-			min = vim.diagnostic.severity.ERROR,
-		},
-		current_line = true,
-	},
 })
