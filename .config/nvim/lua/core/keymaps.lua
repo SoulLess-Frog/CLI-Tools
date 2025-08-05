@@ -80,3 +80,8 @@ end, "[S]earch all [T]odo comments")
 map("n", "<leader>sT", function()
 	Snacks.picker.todo_comments({ keywords = { "TODO", "FIX", "FIXME" } })
 end, "[S]earch only [T]odo/Fix/Fixme")
+
+-- Code Runner
+map("n", "<leader>r", function()
+	require("code_runner").run_code()
+end, "[R]un Code")

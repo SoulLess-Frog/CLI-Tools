@@ -32,7 +32,7 @@ require("lazy").setup({
 	require("plugins.ufo"),
 	require("plugins.snacks"),
 	require("plugins.misc"),
-	require("plugins.tmux_runner"),
+	require("plugins.code_runner"),
 	require("plugins.flash"),
 	require("plugins.venv_selector"),
 	require("plugins.mini"),
