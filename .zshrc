@@ -78,3 +78,5 @@ zle -N zle-keymap-select
 precmd_functions+=(_set_beam_cursor) 
 # ensure insert mode and beam cursor when exiting vim
 zle-line-init() { zle -K viins; _set_beam_cursor }
+
+. "$HOME/.local/share/../bin/env"
