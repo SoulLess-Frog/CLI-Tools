@@ -7,12 +7,14 @@ return {
 	},
 	opts = {
 		servers = {
-			html = { filetypes = { "html", "twig", "hbs" } },
 			cssls = {},
-			dockerls = {},
+			ts_ls = {},
+			tailwindcss = {},
+			emmet_language_server = {},
 			sqlls = {},
 			jsonls = {},
 			yamlls = {},
+			dockerls = {},
 			rust_analyzer = {},
 			basedpyright = {},
 			lua_ls = {
