@@ -34,6 +34,53 @@ return {
 		},
 	},
 
+	keys = {
+		{
+			"<leader>rn",
+
+			function()
+				vim.lsp.buf.rename()
+			end,
+			desc = "[R]e[N]ame",
+		},
+		{
+			"<leader>ca",
+			function()
+				vim.lsp.buf.code_action()
+			end,
+			desc = "[C]ode [A]ction",
+		},
+		{
+			"gd",
+			function()
+				Snacks.picker.lsp_definitions()
+			end,
+			desc = "[G]oto [D]efinition",
+		},
+		{
+			"gD",
+			function()
+				Snacks.picker.lsp_declarations()
+			end,
+			desc = "[G]oto [D]eclaration",
+		},
+		{
+			"gr",
+			function()
+				Snacks.picker.lsp_references()
+			end,
+			nowait = true,
+			desc = "[G]oto [R]eferences",
+		},
+		{
+			"gI",
+			function()
+				Snacks.picker.lsp_implementations()
+			end,
+			desc = "[G]oto [I]mplementation",
+		},
+	},
+
 	config = function(_, opts)
 		require("mason").setup()
 
