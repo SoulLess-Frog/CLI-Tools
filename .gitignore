@@ -5,3 +5,5 @@
 env/
 venv/
 lazy-lock.json
+.config/tmux/plugins/
+.config/yazi/plugins/
