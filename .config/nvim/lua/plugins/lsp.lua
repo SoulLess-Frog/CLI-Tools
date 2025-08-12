@@ -1,5 +1,6 @@
 return {
 	"williamboman/mason.nvim",
+	lazy = false,
 	dependencies = {
 		"neovim/nvim-lspconfig",
 		"williamboman/mason-lspconfig.nvim",
@@ -78,6 +79,13 @@ return {
 				Snacks.picker.lsp_implementations()
 			end,
 			desc = "[G]oto [I]mplementation",
+		},
+		{
+			"gy",
+			function()
+				Snacks.picker.lsp_type_definitions()
+			end,
+			desc = "[G]oto T[y]pe Definition",
 		},
 	},
 
