@@ -7,6 +7,11 @@ return {
 	{ "norcalli/nvim-colorizer.lua", opts = {} },
 	{ "asiryk/auto-hlsearch.nvim", opts = {} },
 	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = true,
+	},
+	{
 		"m4xshen/hardtime.nvim",
 		dependencies = { "MunifTanjim/nui.nvim" },
 		opts = {},
