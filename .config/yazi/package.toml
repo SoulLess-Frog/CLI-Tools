@@ -1,7 +1,7 @@
 [[plugin.deps]]
 use = "boydaihungst/restore"
-rev = "84f1921"
-hash = "355f163cb374b5c9514aee2b64121678"
+rev = "2a2ba2f"
+hash = "12d8576d0cb8355a7e15d622913eb250"
 
 [[plugin.deps]]
 use = "ndtoan96/ouch"
@@ -10,8 +10,8 @@ hash = "2bd799b42b8e42b8ef100310be71f8d1"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
-rev = "de53d90"
-hash = "f10a14e823382d90fab5b3ee54cb38fe"
+rev = "e95c7b3"
+hash = "e1de3054c0d1a2d8dc6f007eadc0fa31"
 
 [flavor]
 deps = []
