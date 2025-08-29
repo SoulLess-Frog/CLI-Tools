@@ -31,10 +31,11 @@ require("lazy").setup({
 	require("plugins.ufo"),
 	require("plugins.misc"),
 	require("plugins.code_runner"),
+	require("plugins.dap"),
 	require("plugins.venv_selector"),
 	require("plugins.mini"),
 	require("plugins.snacks"),
-	-- require("plugins.flash"),
+	require("plugins.flash"),
 	require("plugins.git"),
 	require("plugins.gitsigns"),
 })

@@ -4,7 +4,11 @@ return {
 	{ "tpope/vim-obsession", lazy = false },
 	{ "tpope/vim-sleuth" },
 	{ "folke/which-key.nvim" },
-	{ "norcalli/nvim-colorizer.lua", opts = {} },
+	{
+		"catgoose/nvim-colorizer.lua",
+		event = "BufReadPre",
+		opts = {},
+	},
 	{ "asiryk/auto-hlsearch.nvim", opts = {} },
 	{
 		"windwp/nvim-autopairs",
@@ -14,7 +18,7 @@ return {
 	{
 		"m4xshen/hardtime.nvim",
 		dependencies = { "MunifTanjim/nui.nvim" },
-		opts = {},
+		opts = { disable_mouse = false },
 	},
 	{
 		"folke/todo-comments.nvim",
