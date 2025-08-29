@@ -4,8 +4,6 @@ return {
 		"rcarriga/nvim-dap-ui",
 		"nvim-neotest/nvim-nio",
 		"theHamsta/nvim-dap-virtual-text",
-		"mason-org/mason.nvim",
-		"jay-babu/mason-nvim-dap.nvim",
 
 		-- Add your own debuggers here
 		"leoluz/nvim-dap-go",
@@ -60,10 +58,8 @@ return {
 		local dap = require("dap")
 		local dapui = require("dapui")
 
-		require("nvim-dap-virtual-text").setup({})
-		require("mason-nvim-dap").setup({ ensure_installed = { "delve", "python" }, handlers = {} })
-
 		dapui.setup()
+		require("nvim-dap-virtual-text").setup({})
 
 		-- Change breakpoint icons
 		vim.api.nvim_set_hl(0, "DapBreak", { fg = "#e51400" })
