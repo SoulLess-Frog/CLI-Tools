@@ -5,7 +5,6 @@ return {
 		require("conform").setup({
 			formatters_by_ft = {
 				lua = { "stylua" },
-				rust = { "rustfmt" },
 				python = { "ruff_fix", "ruff_format", "ruff_organize_imports" },
 				json = { "prettierd", "prettier", stop_after_first = true },
 				yaml = { "prettierd", "prettier", stop_after_first = true },

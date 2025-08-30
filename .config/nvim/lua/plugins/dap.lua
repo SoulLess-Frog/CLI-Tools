@@ -4,18 +4,23 @@ return {
 		"rcarriga/nvim-dap-ui",
 		"nvim-neotest/nvim-nio",
 		"theHamsta/nvim-dap-virtual-text",
-
-		-- Add your own debuggers here
-		"leoluz/nvim-dap-go",
-		"mfussenegger/nvim-dap-python",
+		"mason-org/mason.nvim",
+		"jay-babu/mason-nvim-dap.nvim",
 	},
 	keys = {
 		{
-			"<leader>rd",
+			"<leader>dc",
 			function()
 				require("dap").continue()
 			end,
-			desc = "[R]un [D]ebugger",
+			desc = "[D]ebug: [C]ontinue",
+		},
+		{
+			"<leader>dt",
+			function()
+				require("dap").terminate()
+			end,
+			desc = "[D]ebug: [T]erminate",
 		},
 		{
 			"<leader>di",
@@ -60,8 +65,15 @@ return {
 
 		dapui.setup()
 		require("nvim-dap-virtual-text").setup({})
+		require("mason-nvim-dap").setup({
+			ensure_installed = { "python", "codelldb" },
+			handlers = {
+				function(config)
+					require("mason-nvim-dap").default_setup(config)
+				end,
+			},
+		})
 
-		-- Change breakpoint icons
 		vim.api.nvim_set_hl(0, "DapBreak", { fg = "#e51400" })
 		vim.api.nvim_set_hl(0, "DapStop", { fg = "#ffcc00" })
 		local breakpoint_icons = vim.g.have_nerd_font
@@ -88,12 +100,5 @@ return {
 		dap.listeners.after.event_initialized["dapui_config"] = dapui.open
 		dap.listeners.before.event_terminated["dapui_config"] = dapui.close
 		dap.listeners.before.event_exited["dapui_config"] = dapui.close
-
-		require("dap-python").setup()
-		require("dap-go").setup({
-			delve = {
-				detached = vim.fn.has("win32") == 0,
-			},
-		})
 	end,
 }
