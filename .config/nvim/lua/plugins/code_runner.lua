@@ -17,11 +17,7 @@ return {
 			mode = "vimux",
 			filetype = {
 				python = "uv run",
-				rust = {
-					"cd $dir &&",
-					"rustc $fileName &&",
-					"$dir/$fileNameWithoutExt",
-				},
+				rust = { "cargo run" },
 			},
 		})
 

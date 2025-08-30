@@ -97,7 +97,6 @@ return {
 			"stylua",
 			"prettierd",
 			"prettier",
-			"rustfmt",
 			"ruff",
 		})
 
