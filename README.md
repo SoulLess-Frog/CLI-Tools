@@ -14,12 +14,12 @@ The CLI tools that i use to code
   - git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 ## How to for arch 
-- sudo pacman -S tmux zsh starship neovim yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick npm unzip trash-cli stow
+- sudo pacman -S tmux zsh starship neovim yazi ffmpeg 7zip jq poppler fd ripgrep fzf zoxide imagemagick npm unzip trash-cli stow ouch
   
 ## How to for debian
 
 ### tmux and dependance
-- apt install tmux zsh ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide imagemagick npm unzip trash-cli stow
+- apt install tmux zsh ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide imagemagick npm unzip trash-cli stow ouch
 - curl -sS https://starship.rs/install.sh | sh
   
 ### neovim

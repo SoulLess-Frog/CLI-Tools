@@ -5,14 +5,10 @@ return {
 		indent = { enabled = true },
 		bigfile = { enabled = true },
 		image = { enabled = true },
+		scroll = { enabled = true },
 		notifier = { enabled = true },
 		picker = {
 			enabled = true,
-			sources = {
-				files = { hidden = true },
-				grep = { hidden = true },
-				explorer = { hidden = true },
-			},
 			win = {
 				input = {
 					keys = {

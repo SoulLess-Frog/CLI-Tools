@@ -4,8 +4,8 @@ return {
 		"rcarriga/nvim-dap-ui",
 		"nvim-neotest/nvim-nio",
 		"theHamsta/nvim-dap-virtual-text",
-		"mason-org/mason.nvim",
-		"jay-babu/mason-nvim-dap.nvim",
+
+		"mfussenegger/nvim-dap-python",
 	},
 	keys = {
 		{
@@ -65,14 +65,6 @@ return {
 
 		dapui.setup()
 		require("nvim-dap-virtual-text").setup({})
-		require("mason-nvim-dap").setup({
-			ensure_installed = { "python", "codelldb" },
-			handlers = {
-				function(config)
-					require("mason-nvim-dap").default_setup(config)
-				end,
-			},
-		})
 
 		vim.api.nvim_set_hl(0, "DapBreak", { fg = "#e51400" })
 		vim.api.nvim_set_hl(0, "DapStop", { fg = "#ffcc00" })
@@ -100,5 +92,7 @@ return {
 		dap.listeners.after.event_initialized["dapui_config"] = dapui.open
 		dap.listeners.before.event_terminated["dapui_config"] = dapui.close
 		dap.listeners.before.event_exited["dapui_config"] = dapui.close
+
+		require("dap-python").setup("uv")
 	end,
 }

@@ -1,6 +1,5 @@
 [mgr]
 linemode = "size"
-show_hidden = true
 
 [opener]
 edit = [

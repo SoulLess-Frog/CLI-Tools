@@ -16,7 +16,6 @@ return {
 			jsonls = {},
 			yamlls = {},
 			dockerls = {},
-			rust_analyzer = {},
 			basedpyright = {},
 			lua_ls = {
 				settings = {
