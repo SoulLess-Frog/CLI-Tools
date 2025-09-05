@@ -97,6 +97,8 @@ return {
 			"prettierd",
 			"prettier",
 			"ruff",
+			"rust-analyzer",
+			"codelldb",
 		})
 
 		require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
