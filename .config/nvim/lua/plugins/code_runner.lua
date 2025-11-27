@@ -17,7 +17,8 @@ return {
 			mode = "vimux",
 			filetype = {
 				python = "uv run",
-				rust = { "cargo run" },
+				rust = "cargo run",
+				javascript = "node",
 			},
 		})
 

@@ -44,11 +44,11 @@ return {
 			desc = "[R]e[N]ame",
 		},
 		{
-			"<leader>ca",
+			"<leader>a",
 			function()
 				vim.lsp.buf.code_action()
 			end,
-			desc = "[C]ode [A]ction",
+			desc = "Code [A]ction",
 		},
 		{
 			"gd",

@@ -35,7 +35,6 @@ require("lazy").setup({
 	require("plugins.venv_selector"),
 	require("plugins.mini"),
 	require("plugins.snacks"),
-	require("plugins.flash"),
 	require("plugins.git"),
 	require("plugins.gitsigns"),
 	require("plugins.rustaceanvim"),
