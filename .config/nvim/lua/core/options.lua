@@ -1,5 +1,6 @@
 vim.o.number = true
 vim.o.relativenumber = true -- Set relative numbered lines (default: false)
+vim.o.fillchars = "eob: "
 
 vim.o.clipboard = "unnamedplus" -- Sync clipboard between OS and Neovim. (default: '')
 vim.o.mouse = "a"

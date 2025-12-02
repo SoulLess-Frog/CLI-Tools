@@ -1,11 +1,21 @@
 return {
 	"saghen/blink.cmp",
-	dependencies = { "rafamadriz/friendly-snippets" },
+	event = "VimEnter",
 	version = "1.*",
-	opts = {
-		completion = { documentation = { auto_show = true } },
-		signature = { enabled = true },
-		fuzzy = { implementation = "prefer_rust_with_warning" },
+	dependencies = {
+		"L3MON4D3/LuaSnip",
+		version = "v2.*",
+		dependencies = {
+			{
+				"rafamadriz/friendly-snippets",
+				config = function()
+					require("luasnip.loaders.from_vscode").lazy_load()
+				end,
+			},
+		},
 	},
-	opts_extend = { "sources.default" },
+	opts = {
+		snippets = { preset = "luasnip" },
+		completion = { documentation = { auto_show = true } },
+	},
 }
