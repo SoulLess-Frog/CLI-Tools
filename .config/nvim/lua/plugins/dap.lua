@@ -9,11 +9,11 @@ return {
 	},
 	keys = {
 		{
-			"<leader>dc",
+			"<F1>",
 			function()
 				require("dap").continue()
 			end,
-			desc = "[D]ebug: [C]ontinue",
+			desc = "Debug: Continue",
 		},
 		{
 			"<leader>dt",
@@ -23,25 +23,32 @@ return {
 			desc = "[D]ebug: [T]erminate",
 		},
 		{
-			"<leader>di",
+			"<F2>",
 			function()
 				require("dap").step_into()
 			end,
-			desc = "[D]ebug: Step [I]nto",
+			desc = "Debug: Step Into",
 		},
 		{
-			"<leader>do",
+			"<F3>",
 			function()
 				require("dap").step_over()
 			end,
-			desc = "[D]ebug: Step [O]ver",
+			desc = "Debug: Step Over",
 		},
 		{
-			"<leader>dO",
+			"<F4>",
 			function()
 				require("dap").step_out()
 			end,
-			desc = "[D]ebug: Step [O]ut",
+			desc = "Debug: Step Out",
+		},
+		{
+			"<F5>",
+			function()
+				require("dap").step_back()
+			end,
+			desc = "Debug: Step Back",
 		},
 		{
 			"<leader>db",
