@@ -38,4 +38,5 @@ require("lazy").setup({
 	require("plugins.git"),
 	require("plugins.gitsigns"),
 	require("plugins.rustaceanvim"),
+	require("plugins.leetcode"),
 })
