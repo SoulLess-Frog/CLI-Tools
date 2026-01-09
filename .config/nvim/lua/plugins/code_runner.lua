@@ -22,7 +22,7 @@ return {
 			},
 		})
 
-		vim.g.VimuxHeight = "40%"
+		vim.g.VimuxHeight = "30%"
 		vim.g.VimuxOrientation = "h"
 	end,
 }
