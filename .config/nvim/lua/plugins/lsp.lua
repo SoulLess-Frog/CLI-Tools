@@ -8,6 +8,7 @@ return {
 	},
 	opts = {
 		servers = {
+			jdtls = {},
 			cssls = {},
 			ts_ls = {},
 			tailwindcss = {},
