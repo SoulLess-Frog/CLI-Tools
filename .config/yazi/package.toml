@@ -10,8 +10,8 @@ hash = "f5afc904d5106ee368c8aa2ded43bd74"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mount"
-rev = "babfd0f"
-hash = "77e20b071404f97c09d3f9afdb9482e0"
+rev = "1db18bb"
+hash = "e3260d0b1feded8c8e3ae3afa1169e30"
 
 [flavor]
 deps = []
