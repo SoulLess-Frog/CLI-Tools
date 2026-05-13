@@ -9,6 +9,11 @@ return {
 		notifier = { enabled = true },
 		picker = {
 			enabled = true,
+			sources = {
+				files = { hidden = true },
+				grep = { hidden = true },
+				explore = { hidden = true },
+			},
 			win = {
 				input = {
 					keys = {
