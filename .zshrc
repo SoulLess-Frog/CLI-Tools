@@ -1,8 +1,3 @@
-if [[ -d "$HOME/Android/cmdline-tools/latest/bin" ]]; then
-    export ANDROID_HOME="$HOME/Android"
-    export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
-fi
-
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -60,6 +55,11 @@ alias ls='ls --color'
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+if [[ -d "$HOME/Android/cmdline-tools/latest/bin" ]]; then
+    export ANDROID_HOME="$HOME/Android"
+    export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
