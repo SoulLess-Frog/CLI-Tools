@@ -10,9 +10,11 @@ The CLI tools that i use to code
 - sudo pacman -S neovim yazi tmux zsh ffmpeg 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick npm unzip trash-cli stow ouch git
   
 ## Debian
-- apt install tmux zsh ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide resvg imagemagick npm unzip trash-cli stow ouch git ninja-build gettext cmake curl
+- apt install tmux zsh ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide resvg imagemagick npm unzip trash-cli stow ouch git ninja-build gettext cmake curl kitty-terminfo
 
 # Second thing you need to do
+- chsh -s $(which zsh)
+
 - git clone https://github.com/SoulLess-Frog/CLI-Tools.git
 - cd CLI-Tools
 - stow .
@@ -33,6 +35,7 @@ The CLI tools that i use to code
 - curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 - restart shell
 - rustup update
+- cargo install ouch
 - git clone https://github.com/sxyazi/yazi.git
 - cd yazi
 - cargo build --release --locked
