@@ -10,7 +10,7 @@ The CLI tools that i use to code
 - sudo pacman -S neovim yazi tmux zsh ffmpeg 7zip jq poppler fd ripgrep fzf zoxide resvg imagemagick npm unzip trash-cli stow ouch git
   
 ## Debian
-- apt install tmux zsh ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide resvg imagemagick npm unzip trash-cli stow ouch git ninja-build gettext cmake curl kitty-terminfo
+- sudo apt install tmux zsh ffmpeg 7zip jq poppler-utils fd-find ripgrep fzf zoxide resvg imagemagick npm unzip trash-cli stow ouch git ninja-build gettext cmake curl kitty-terminfo clang
 
 # Second thing you need to do
 - chsh -s $(which zsh)
@@ -39,4 +39,4 @@ The CLI tools that i use to code
 - git clone https://github.com/sxyazi/yazi.git
 - cd yazi
 - cargo build --release --locked
-- mv target/release/yazi target/release/ya /usr/local/bin/
+- sudo mv target/release/yazi target/release/ya /usr/local/bin/
