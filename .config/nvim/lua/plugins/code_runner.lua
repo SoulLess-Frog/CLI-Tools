@@ -14,7 +14,7 @@ return {
 
 	config = function()
 		require("code_runner").setup({
-			mode = "vimux",
+			mode = vim.env.TMUX and "vimux" or "term",
 			filetype = {
 				python = "uv run",
 				rust = "cargo run",

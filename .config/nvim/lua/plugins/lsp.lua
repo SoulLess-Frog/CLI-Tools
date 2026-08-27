@@ -13,11 +13,11 @@ return {
 			ts_ls = {},
 			tailwindcss = {},
 			emmet_language_server = {},
-			sqlls = {},
+			sqls = {},
 			jsonls = {},
 			yamlls = {},
 			dockerls = {},
-			basedpyright = {},
+			ty = {},
 			lua_ls = {
 				settings = {
 					Lua = {
