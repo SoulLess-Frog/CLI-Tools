@@ -1,11 +1,11 @@
 return {
 	{ "tpope/vim-fugitive" },
-	{ "tpope/vim-rhubarb" },
 	{
 		"neogitorg/neogit",
 		dependencies = {
+			"folke/snacks.nvim",
+			"nvim-mini/mini.nvim",
 			"nvim-lua/plenary.nvim",
-			"sindrets/diffview.nvim",
 		},
 		config = true,
 
@@ -23,7 +23,13 @@ return {
 			},
 			{ "<leader>gB", ":G blame<cr>", desc = "[G]it [B]lame" },
 			{ "<leader>ga", ":Gw<cr>", desc = "[G]it [A]dd this file" },
-			{ "<leader>gd", ":Gdiffsplit<cr>", desc = "[G]it [D]iff" },
+			{
+				"<leader>gd",
+				function()
+					MiniDiff.toggle_overlay()
+				end,
+				desc = "[G]it [D]iff",
+			},
 		},
 	},
 }

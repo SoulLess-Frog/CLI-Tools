@@ -25,8 +25,14 @@ map("n", "N", "Nzv", "")
 -- Buffers
 map("n", "<S-l>", ":bnext<CR>", "")
 map("n", "<S-h>", ":bprevious<CR>", "")
-map("n", "<leader>q", ":Bdelete <CR>", "[Q]uit buffer") -- close buffer
-map("n", "<leader>x", ":w <CR>|:Bdelete <CR>", "Write and quit buffer") -- close buffer
+
+map("n", "<leader>q", function()
+	Snacks.bufdelete()
+end, "[Q]uit buffer")
+map("n", "<leader>x", function()
+	vim.cmd.write()
+	Snacks.bufdelete()
+end, "Write and quit buffer")
 map("n", "<leader>b", ":enew <CR>", "New [B]uffer") -- new buffer
 
 -- Window management

@@ -1,5 +1,11 @@
 return {
-	{ "echasnovski/mini.ai", version = "*", opts = {} },
-	{ "echasnovski/mini.surround", version = "*", opts = {} },
-	{ "echasnovski/mini.comment", version = "*", opts = {} },
+	"nvim-mini/mini.nvim",
+	version = false,
+	config = function()
+		require("mini.ai").setup()
+		require("mini.diff").setup()
+		require("mini.pairs").setup()
+		require("mini.surround").setup()
+		require("mini.sessions").setup()
+	end,
 }
