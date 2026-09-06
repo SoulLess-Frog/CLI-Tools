@@ -10,10 +10,10 @@ end
 map({ "n", "v" }, "<Space>", "<Nop>", "")
 
 -- save file
-map("n", "<leader>w", ":w <CR>", "[W]right file")
+map("n", "<leader>w", ":w <CR>", "[W]rite file")
 
 -- quit file
-map("n", "<C-q>", ":q! <CR>", "")
+map("n", "<C-q>", ":q <CR>", "")
 
 -- delete single character without copying into register
 map("n", "x", '"_x', "")
@@ -25,8 +25,8 @@ map("n", "N", "Nzv", "")
 -- Buffers
 map("n", "<S-l>", ":bnext<CR>", "")
 map("n", "<S-h>", ":bprevious<CR>", "")
-map("n", "<leader>q", ":bd! <CR>", "[Q]uit buffer") -- close buffer
-map("n", "<leader>x", ":w <CR>|:bd! <CR>", "Wright and quit buffer") -- close buffer
+map("n", "<leader>q", ":Bdelete <CR>", "[Q]uit buffer") -- close buffer
+map("n", "<leader>x", ":w <CR>|:Bdelete <CR>", "Write and quit buffer") -- close buffer
 map("n", "<leader>b", ":enew <CR>", "New [B]uffer") -- new buffer
 
 -- Window management
