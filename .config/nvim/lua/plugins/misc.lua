@@ -1,7 +1,7 @@
 return {
 	{ "christoomey/vim-tmux-navigator", lazy = false },
 	{ "mrjones2014/smart-splits.nvim" },
-	{ "tpope/vim-obsession", lazy = false },
+	-- { "tpope/vim-obsession", lazy = false },
 	{ "tpope/vim-sleuth" },
 	{ "folke/which-key.nvim" },
 	{
@@ -10,11 +10,11 @@ return {
 		opts = {},
 	},
 	{ "asiryk/auto-hlsearch.nvim", opts = {} },
-	{
-		"windwp/nvim-autopairs",
-		event = "InsertEnter",
-		config = true,
-	},
+	-- {
+	-- 	"windwp/nvim-autopairs",
+	-- 	event = "InsertEnter",
+	-- 	config = true,
+	-- },
 	{
 		"m4xshen/hardtime.nvim",
 		dependencies = { "MunifTanjim/nui.nvim" },

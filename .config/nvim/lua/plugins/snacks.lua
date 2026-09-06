@@ -2,11 +2,13 @@ return {
 	"folke/snacks.nvim",
 	priority = 1000,
 	opts = {
-		indent = { enabled = true },
-		bigfile = { enabled = true },
 		image = { enabled = true },
+		indent = { enabled = true },
 		scroll = { enabled = true },
+		bigfile = { enabled = true },
 		notifier = { enabled = true },
+		bufdelete = { enabled = true },
+
 		picker = {
 			enabled = true,
 			sources = {
