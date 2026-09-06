@@ -1,9 +1,10 @@
 return { -- Highlight, edit, and navigate code
 	"nvim-treesitter/nvim-treesitter",
+	lazy = false,
 	build = ":TSUpdate",
-	main = "nvim-treesitter.config", -- Sets main module to use for opts
-	opts = {
-		ensure_installed = {
+	config = function()
+		require("nvim-treesitter").install({
+			"rust",
 			"lua",
 			"python",
 			"c",
@@ -23,13 +24,21 @@ return { -- Highlight, edit, and navigate code
 			"markdown",
 			"markdown_inline",
 			"bash",
+			"zsh",
 			"fish",
-			"hyprlang",
-		},
+			"javascript",
+		})
 
-		-- Autoinstall languages that are not installed
-		auto_install = true,
-		highlight = { enable = true },
-		indent = { enable = true },
-	},
+		vim.api.nvim_create_autocmd("FileType", {
+			pattern = { "<filetype>" },
+			callback = function()
+				vim.treesitter.start()
+			end,
+		})
+
+		vim.wo[0][0].foldexpr = "v:lua.vim.treesitter.foldexpr()"
+		vim.wo[0][0].foldmethod = "expr"
+
+		vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+	end,
 }

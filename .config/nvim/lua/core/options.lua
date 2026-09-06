@@ -3,7 +3,7 @@ vim.o.relativenumber = true -- Set relative numbered lines (default: false)
 vim.o.fillchars = "eob: "
 
 vim.o.clipboard = "unnamedplus" -- Sync clipboard between OS and Neovim. (default: '')
-vim.o.mouse = "a"
+vim.o.mouse = ""
 
 vim.o.wrap = false -- Display lines as one long line (default: true)
 vim.o.linebreak = true -- Companion to wrap, don't split words (default: false)

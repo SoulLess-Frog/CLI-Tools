@@ -28,7 +28,7 @@ require("lazy").setup({
 	require("plugins.lsp"),
 	require("plugins.autocompletion"),
 	require("plugins.formatting"),
-	require("plugins.ufo"),
+	-- require("plugins.ufo"),
 	require("plugins.misc"),
 	require("plugins.code_runner"),
 	require("plugins.dap"),
