@@ -17,6 +17,29 @@ fi
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
+# Configure zsh-vi-mode
+ZVM_SYSTEM_CLIPBOARD_ENABLED=true
+
+() {
+  local theme="${XDG_CONFIG_HOME:-$HOME/.config}/kitty/themes/noctalia.conf"
+  local key value
+  [[ -r "$theme" ]] || return
+
+  while read -r key value; do
+    case "$key" in
+      selection_foreground) ZVM_VI_HIGHLIGHT_FOREGROUND="$value" ;;
+      selection_background) ZVM_VI_HIGHLIGHT_BACKGROUND="$value" ;;
+    esac
+  done < "$theme"
+}
+
+function zvm_after_lazy_keybindings() {
+  zvm_bindkey vicmd  'p' zvm_paste_clipboard_after
+  zvm_bindkey vicmd  'P' zvm_paste_clipboard_before
+  zvm_bindkey visual 'p' zvm_visual_paste_clipboard
+  zvm_bindkey visual 'P' zvm_visual_paste_clipboard
+}
+
 # Add in zsh plugins
 zinit ice depth=1; zinit light zsh-users/zsh-completions
 zinit ice depth=1; zinit light jeffreytse/zsh-vi-mode 
@@ -63,3 +86,7 @@ fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# >>> Codex installer >>>
+export PATH="$HOME/.local/bin:$PATH"
+# <<< Codex installer <<<
