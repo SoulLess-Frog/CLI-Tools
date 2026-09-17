@@ -11,3 +11,8 @@ desc = "Restore last deleted files/folders"
 [[mgr.prepend_keymap]]
 on  = "M"
 run = "plugin mount"
+
+[[mgr.prepend_keymap]]
+on = ["g", "p"]
+run = "cd ~/Projects"
+desc = "Go to Projects"
