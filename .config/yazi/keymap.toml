@@ -16,3 +16,8 @@ run = "plugin mount"
 on = ["g", "p"]
 run = "cd ~/Projects"
 desc = "Go to Projects"
+
+[[mgr.prepend_keymap]]
+on = ["g", "o"]
+run = "cd \"~/Sync/Obsidian/Note's/6 - PDF\""
+desc = "Go to Obsidian PDF"

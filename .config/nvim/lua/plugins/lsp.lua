@@ -8,15 +8,6 @@ return {
 	},
 	opts = {
 		servers = {
-			jdtls = {},
-			cssls = {},
-			ts_ls = {},
-			tailwindcss = {},
-			emmet_language_server = {},
-			sqls = {},
-			jsonls = {},
-			yamlls = {},
-			dockerls = {},
 			ty = {},
 			lua_ls = {
 				settings = {
