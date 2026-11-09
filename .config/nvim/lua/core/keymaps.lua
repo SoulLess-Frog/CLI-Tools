@@ -3,24 +3,25 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 local map = function(mode, keys, func, desc)
+	desc = desc or ""
 	vim.keymap.set(mode, keys, func, { noremap = true, silent = true, desc = desc })
 end
 
 -- Disable the spacebar key's default behavior in Normal and Visual modes
-map({ "n", "v" }, "<Space>", "<Nop>", "")
+map({ "n", "v" }, "<Space>", "<Nop>")
 
 -- save file
 map("n", "<leader>w", ":w <CR>", "[W]rite file")
 
 -- quit file
-map("n", "<C-q>", ":q <CR>", "")
+map("n", "<C-q>", ":q <CR>")
 
 -- delete single character without copying into register
-map("n", "x", '"_x', "")
+map("n", "x", '"_x')
 
 -- Find and open fold
-map("n", "n", "nzv", "")
-map("n", "N", "Nzv", "")
+map("n", "n", "nzv")
+map("n", "N", "Nzv")
 
 -- Buffers
 map("n", "<S-l>", ":bnext<CR>", "")
@@ -38,12 +39,6 @@ map("n", "<leader>b", ":enew <CR>", "New [B]uffer") -- new buffer
 -- Window management
 map("n", "<leader>v", "<C-w>v", "Split [V]ertically") -- split window vertically
 map("n", "<leader>h", "<C-w>s", "Split [H]orizontally") -- split window horizontally
-
--- Navigate between splits
-map("n", "<A-h>", ":SmartResizeLeft<CR>", "")
-map("n", "<A-j>", ":SmartResizeDown<CR>", "")
-map("n", "<A-k>", ":SmartResizeUp<CR>", "")
-map("n", "<A-l>", ":SmartResizeRight<CR>", "")
 
 -- Toggle line wrapping
 map("n", "<leader>tw", ":set wrap!<CR>", "[T]oggle [W]rap")

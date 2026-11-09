@@ -76,16 +76,7 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 alias ls='ls --color'
 
 # Shell integrations
-eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-
-if [[ -d "$HOME/Android/cmdline-tools/latest/bin" ]]; then
-    export ANDROID_HOME="$HOME/Android"
-    export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
-fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# opencode
-export PATH="$HOME/.opencode/bin:$PATH"

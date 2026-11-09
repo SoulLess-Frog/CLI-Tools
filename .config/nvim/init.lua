@@ -34,7 +34,9 @@ require("lazy").setup({
 	require("plugins.dap"),
 	require("plugins.mini"),
 	require("plugins.snacks"),
+	require("plugins.smart_splits"),
 	require("plugins.git"),
 	require("plugins.rustaceanvim"),
 	require("plugins.leetcode"),
+	require("plugins.venv_selector"),
 })
